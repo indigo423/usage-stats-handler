@@ -1,6 +1,7 @@
 FROM node:alpine
 
 RUN mkdir /app
+
 WORKDIR /app
 
 COPY package.json /app
@@ -11,4 +12,6 @@ COPY . /app
 
 EXPOSE 3542
 
-CMD ["npm", "start"]
+ENTRYPOINT [ "npm" ]
+
+CMD [ "start" ]
